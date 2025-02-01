@@ -38,7 +38,7 @@ public class CategoryService implements ICategoryService{
         Category category1=this.getCategory(id_category);
         category1.setId_category(id_category);
         category1.setName(category.getName());
-        this.saveCategory(category);
+        this.saveCategory(category1);
     }
 
     @Override
