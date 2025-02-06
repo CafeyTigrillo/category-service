@@ -1,22 +1,23 @@
 package com.mipagina.category_service.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 public class Category {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Unique identifier of the category", example = "1")
     private Long id_category;
+
+    @Schema(description = "Name of the category", example = "Electronics", required = true)
     private String name;
 
-    public Long getId_category() {
+public Long getId_category() {
         return id_category;
     }
 
